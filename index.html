@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Philippine Vaccination Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Vaccination Tracking Form</h1>
+
+    <form name="vacData" action="submit">
+        <h2>Patient</h2>
+        <hr>
+        <div class="field-group">
+            <label class="left" for="first-name">Fist Name</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="first_name" id="first-name" placeholder="First Name">
+                <small class="error-message" id="error_first_name"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="mid-name">Middle Name</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="mid_name" id="mid-name" placeholder="Middle Name">
+                <small class="error-message" id="error_mid_name"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="last-name">Last Name</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="last_name" id="last-name" placeholder="Last Name">
+                <small class="error-message" id="error_last_name"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="bday">Birthday</label>
+            <div class="right">
+                <input class="bot-border-only" type="date" name="bday" id="bday">
+                <small class="error-message" id="error_bday"></small>
+            </div>
+        </div>
+        <div class="field-group" id="gender-field">
+            <p class="left">Gender</p>
+            <div class="right">
+                <div class="radio-options">
+                    <div class="radio-group">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+                <small class="error-message" id="error_gender"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="email">Email</label>
+            <div class="right">
+                <input class="bot-border-only" type="email" name="email" id="email" placeholder="email@example.com">
+                <small class="error-message" id="error_email"></small>
+            </div>
+        </div>
+        <h2>Address</h2>
+        <hr>
+        <div class="field-group">
+            <label class="left" for="region">Region</label>
+            <div class="right">
+                <select class="bot-border-only" name="region" id="region">
+                    <option value="" disabled selected>-- Select your region --</option>
+                    <option value="Region I - Ilocos Region">Region I - Ilocos Region</option>
+                    <option value="Region II - Cagayan Valley">Region II - Cagayan Valley</option>
+                    <option value="Region III - Central Luzon">Region III - Central Luzon</option>
+                    <option value="Region IV - A - CALABARZON">Region IV - A - CALABARZON</option>
+                    <option value="MIMAROPA Region">MIMAROPA Region</option>
+                    <option value="Region V - Bicol Region">Region V - Bicol Region</option>
+                    <option value="Region VI - Western Visayas">Region VI - Western Visayas</option>
+                    <option value="Region VII - Central Visayas">Region VII - Central Visayas</option>
+                    <option value="Region VIII - Eastern Visayas">Region VIII - Eastern Visayas</option>
+                    <option value="Region IX - Zanboanga Peninsula">Region IX - Zanboanga Peninsula</option>
+                    <option value="Region X - Northern Mindanao">Region X - Northern Mindanao</option>
+                    <option value="Region XI - Davao Region">Region XI - Davao Region</option>
+                    <option value="Region XII - SOCCSKSARGEN">Region XII - SOCCSKSARGEN</option>
+                    <option value="Region XIII - Caraga">Region XIII - Caraga</option>
+                    <option value="NCR - National Capital Region">NCR - National Capital Region</option>
+                    <option value="CAR - Cordillera Administrative Region">CAR - Cordillera Administrative Region
+                    </option>
+                    <option value="BARMM - Bangsamoro Autonomous Region in Muslim Mindanao">BARMM - Bangsamoro
+                        Autonomous
+                        Region in Muslim Mindanao</option>
+                </select>
+                <small class="error-message" id="error_region"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="province">Province</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="province" id="province" placeholder="Province">
+                <small class="error-message" id="error_province"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="barangay">Barangay</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="barangay" id="barangay" placeholder="Barangay">
+                <small class="error-message" id="error_barangay"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="street">Street</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="street" id="street" placeholder="Street">
+                <small class="error-message" id="error_street"></small>
+            </div>
+        </div>
+        <h2>Vaccination Details</h2>
+        <hr>
+        <div class="field-group">
+            <label class="left" for="vac-dose1">Vaccine Brand (Dose 1)</label>
+            <div class="right">
+                <select class="bot-border-only" name="vaccine_dose1" id="vac-dose1">
+                    <option value="" disabled selected>-- First Dose Vaccine --</option>
+                    <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Coronavac">Coronavac</option>
+                    <option value="Sputnik V">Sputnik V</option>
+                    <option value="Janssen">Janssen</option>
+                    <option value="Covaxin">Covaxin</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Sinopharm">Sinopharm</option>
+                    <option value="Covovax">Covovax</option>
+                </select>
+                <small class="error-message" id="error_vaccine_dose1"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="date-dose1">Date of Vaccination (Dose 1)</label>
+            <div class="right">
+                <input class="bot-border-only" type="date" name="date_dose1" id="date-dose1">
+                <small class="error-message" id="error_date_dose1"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <label class="left" for="site-dose1">Vaccination Site (Dose 1)</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="site_dose1" id="site_dose1"
+                    placeholder="Vaccination Site">
+                <small class="error-message" id="error_site_dose1"></small>
+            </div>
+        </div>
+        <div class="field-group" id="dose2-confirmation-field">
+            <p class="left">Did you already get your second vaccination?</p>
+            <div class="right">
+                <div class="radio-options">
+                    <div class="radio-group">
+                        <input type="radio" id="yes" name="dose2_confirmation" value="yes">
+                        <label for="yes">Yes</label>
+                    </div>
+                    <div class="radio-group">
+                        <input type="radio" id="no" name="dose2_confirmation" value="no">
+                        <label for="no">No</label>
+                    </div>
+                </div>
+                <small class="error-message" id="error_dose2_confirmation"></small>
+            </div>
+        </div>
+        <div class="field-group dose2_field">
+            <label class="left" for="vac-dose1">Vaccine Brand (Dose 2)</label>
+            <div class="right">
+                <select class="bot-border-only" name="vaccine_dose2" id="vac-dose2">
+                    <option value="" disabled selected>-- Second Dose Vaccine --</option>
+                    <option value="Pfizer-BioNTech">Pfizer-BioNTech</option>
+                    <option value="AstraZeneca">AstraZeneca</option>
+                    <option value="Coronavac">Coronavac</option>
+                    <option value="Sputnik V">Sputnik V</option>
+                    <option value="Janssen">Janssen</option>
+                    <option value="Covaxin">Covaxin</option>
+                    <option value="Moderna">Moderna</option>
+                    <option value="Sinopharm">Sinopharm</option>
+                    <option value="Covovax">Covovax</option>
+                </select>
+                <small class="error-message" id="error_vaccine_dose2"></small>
+            </div>
+        </div>
+        <div class="field-group dose2_field">
+            <label class="left" for="date-dose2">Date of Vaccination (Dose 2)</label>
+            <div class="right">
+                <input class="bot-border-only" type="date" name="date_dose2" id="date-dose2">
+                <small class="error-message" id="error_date_dose2"></small>
+            </div>
+        </div>
+        <div class="field-group dose2_field">
+            <label class="left" for="site-dose2">Vaccination Site (Dose 2)</label>
+            <div class="right">
+                <input class="bot-border-only" type="text" name="site_dose2" id="site_dose2"
+                    placeholder="Vaccination Site">
+                <small class="error-message" id="error_site_dose2"></small>
+            </div>
+        </div>
+        <div class="field-group">
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>

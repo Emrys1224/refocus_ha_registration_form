@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 18px;
+  color: #353535;
+  background-color: #f5f5f5;
+}
+
+h1 {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  background-color: #ff9500;
+}
+
+hr {
+  margin-bottom: 20px;
+}
+
+form {
+  margin: 50px 5%;
+}
+
+.field-group {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.left {
+  width: 33%;
+  margin-right: 30px;
+  text-align: right;
+}
+
+.right {
+  width: 50%;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.bot-border-only {
+  border: none;
+  border-bottom: 1px solid #bebebe;
+  padding-left: 10px;
+}
+
+.error-message {
+  color: #ff6767;
+  font-size: 0.75rem;
+  padding-left: 10px;
+  padding-top: 3px;
+}
+
+.radio-group {
+  display: inline-flex;
+  margin-right: 10px;
+  -moz-column-gap: 5px;
+  column-gap: 5px;
+}
+
+input:focus, select:focus {
+  outline: none;
+  background-color: #ffe8c8;
+}
+
+input[type=radio] {
+  cursor: pointer;
+  accent-color: #ff9500;
+}
+
+.dose2_field {
+  display: none;
+}
+
+.field-group:last-child {
+  padding: 20px;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  background-color: #ff9500;
+  font-weight: bold;
+  border: none;
+  border-radius: 11px;
+}
